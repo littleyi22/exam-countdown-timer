@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>極致未來感倒數計時器</title>
+    <meta name="description" content="一個設計優雅、具有玻璃擬態效果的高級倒數計時器。">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <img src="modern_gradient_background.png" alt="Background" class="bg-image" id="bgImage">
+    <div class="bg-overlay"></div>
+
+    <main class="container">
+        <h1 id="mainTitle">倒數開始</h1>
+        
+        <div class="timer">
+            <div class="time-segment">
+                <span class="number" id="days">00</span>
+                <span class="label">Days</span>
+            </div>
+            <div class="time-segment">
+                <span class="number" id="hours">00</span>
+                <span class="label">Hours</span>
+            </div>
+            <div class="time-segment">
+                <span class="number" id="minutes">00</span>
+                <span class="label">Minutes</span>
+            </div>
+            <div class="time-segment">
+                <span class="number" id="seconds">00</span>
+                <span class="label">Seconds</span>
+            </div>
+        </div>
+
+        <div class="settings">
+            <div class="input-group">
+                <input type="text" id="inputTitle" placeholder="輸入倒數標題">
+                <input type="datetime-local" id="targetDate">
+                <button id="saveBtn">更新並儲存</button>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+                設定會自動儲存在您的瀏覽器中
+            </p>
+        </div>
+    </main>
+
+    <div class="celebration" id="celebration">
+        <h2>時間到！</h2>
+        <p style="font-size: 1.5rem;">您的目標時間已達成</p>
+        <button onclick="resetTimer()" style="margin-top: 2rem;">重新設定</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
